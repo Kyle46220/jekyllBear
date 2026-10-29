@@ -1,9 +1,7 @@
+# Users sign in with email/password via Netlify Identity (invite-only)
 backend:
-  name: github
-  repo: kyle46220/jekyllbear
+  name: git-gateway
   branch: master
-  base_url: https://api.netlify.com
-  auth_endpoint: auth
 
 media_folder: assets/images
 public_folder: /assets/images
