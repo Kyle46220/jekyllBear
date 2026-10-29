@@ -1,0 +1,23 @@
+backend:
+  name: github
+  repo: kyle46220/jekyllbear
+  branch: master
+  base_url: https://api.netlify.com
+  auth_endpoint: auth
+
+media_folder: assets/images
+public_folder: /assets/images
+
+collections:
+  - name: blog
+    label: Blog
+    folder: _posts
+    create: true
+    extension: md
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - { label: Layout, name: layout, widget: hidden, default: post }
+      - { label: Title, name: title, widget: string }
+      - { label: Publish Date, name: date, widget: datetime }
+      - { label: Tags, name: tags, widget: list, required: false }
+      - { label: Body, name: body, widget: markdown }
